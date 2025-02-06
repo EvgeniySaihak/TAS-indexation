@@ -1,0 +1,22 @@
+{
+  "name": "tas-indexation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "sass src/scss/main.scss dist/style.css --no-source-map --style=compressed",
+    "build": "npm run build:css && node inline.js",
+    "watch:sass": "sass --watch src/scss/main.scss:dist/style.css",
+    "watch:inline": "nodemon --watch src/index.html --watch src/js/app.js --watch dist/style.css --ext html,js,css --exec \"node inline.js\"",
+    "watch": "concurrently \"npm run watch:sass\" \"npm run watch:inline\"",
+    "start": "live-server dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9",
+    "sass": "^1.84.0"
+  }
+}
