@@ -74,6 +74,29 @@ h1 {
   color: #007acc;
 }
 
+.custom-scroll {
+  overflow-y: initial;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 17px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    border-radius: 17px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #788392;
+    width: 17px;
+  }
+}
+
 
 section {
   max-width: 904px;
@@ -771,6 +794,58 @@ section {
 
     @media (max-width: 600px) {
       padding: 16px;
+    }
+  }
+
+
+  .apps {
+    padding: 40px 40px 0 40px ;
+    background-color: #ecf3f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__left {
+
+      h2 {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        margin-bottom: 16px;
+        color: #374656;
+      }
+
+      .custom-list {
+        list-style-type: disc; /* Указываем стиль маркеров (точки) */
+
+        li {
+          margin-left: 20px; /* Отступ, чтобы точки не сливались с рамкой */
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          color: #374656;
+        }
+      }
+
+      .buttons-box {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        button {
+          cursor: pointer;
+        }
+      }
+
+
+    }
+
+    @media (max-width: 730px) {
+      flex-direction: column;
+      gap:16px;
     }
   }
 }
