@@ -797,7 +797,93 @@ section {
     }
   }
 
+  .pay {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .first__line {
+        color: var(--dark, #374656);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 23.4px */
+      }
+
+      .second__line {
+        color: var(--Dark, #374656);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 28.8px */
+      }
+      @media (max-width: 600px) {
+        width: 90%;
+      }
+    }
+
+    &__button {
+      display: flex;
+      padding: 16px 24px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      border-radius: 24px;
+      background: #ECF3F9;
+
+      .sum {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: var(--Gray, #788392);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 19.2px */
+
+        svg {
+          margin-left: 10px;
+        }
+
+        span {
+          color: var(--Dark, #374656);
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%; /* 28.8px */
+        }
+      }
+
+      .pay-btn {
+        display: flex;
+        height: 40px;
+        padding: 3px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 40px;
+        border: 1px solid var(--Dark, #374656);
+      }
+
+      @media (max-width: 600px) {
+       width: 90%;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 16px;
+      padding: 16px;
+    }
+
+  }
   .apps {
     padding: 40px 40px 0 40px ;
     background-color: #ecf3f9;
@@ -848,7 +934,6 @@ section {
       gap:16px;
     }
   }
-
 
   .results {
     padding: 40px;
