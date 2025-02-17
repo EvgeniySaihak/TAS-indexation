@@ -33,4 +33,18 @@ $(document).ready(function() {
     copyBankDetails('.copy-btn-privat', '.data-privat');
     copyBankDetails('.copy-btn-mono', '.data-mono');
     copyBankDetails('.copy-btn-tas', '.data-tas');
+
+    $(".email-button").click(function () {
+        // Получаем email без SVG
+        let email = $(this).contents().filter(function () {
+            return this.nodeType === 3; // Оставляем только текстовый узел
+        }).text().trim();
+
+        // Копируем email в буфер
+        navigator.clipboard.writeText(email).then(() => {
+            console.log("Email скопирован: " + email);
+        }).catch(err => {
+            console.error("Ошибка копирования: ", err);
+        });
+    });
 });
