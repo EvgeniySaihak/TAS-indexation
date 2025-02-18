@@ -46,5 +46,8 @@ $(document).ready(function() {
         }).catch(err => {
             console.error("Ошибка копирования: ", err);
         });
+
     });
+
+    $(".year").text(new Date().getFullYear());
 });
